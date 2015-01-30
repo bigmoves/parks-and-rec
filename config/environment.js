@@ -23,6 +23,18 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    mapboxToken: 'pk.eyJ1IjoiY2hhZHRtaWxsZXIiLCJhIjoiS29WdkJMbyJ9.JX_CaVO6jbhOd43imqZ_vA',
+
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self'",
+      'font-src': "'self'",
+      'connect-src': "'self' http://a.tiles.mapbox.com",
+      'img-src': "'self' data: http://a.tiles.mapbox.com http://b.tiles.mapbox.com",
+      'style-src': "'self'",
+      'media-src': "'self'"
     }
   };
 

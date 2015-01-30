@@ -1,0 +1,30 @@
+{{map-nav query=query}}
+
+<div id="search-results">
+  {{#each searchResults as |result|}}
+    <div class="search-results-item">
+      {{link-to result.property "parks.park" result.id}}
+    </div>
+  {{/each}}
+</div>
+
+{{#if park.model}}
+<div id="card">
+  <div class="content">
+    <h2>{{park.model.property}}</h2>
+    <p>{{park.model.address}}</p>
+    <ul>
+      {{#each park.model.amenities as |amenity|}}
+        <li>{{amenity}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
+{{/if}}
+
+{{parks-map
+  parks=model
+  location=park.model.loc
+  transitionToPark="transitionToPark"}}
+
+{{outlet}}

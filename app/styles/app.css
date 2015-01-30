@@ -1,3 +1,53 @@
-html, body {
-  margin: 20px;
+body {
+  margin:0;
+  padding:0;
+}
+
+#map {
+  position:absolute;
+  top:0;
+  bottom:0;
+  width:100%;
+}
+
+#map-nav {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1001;
+  background: #fff;
+}
+
+#map-nav input[type="text"] {
+  width: 400px;
+  outline: none;
+  padding: 5px 10px;
+  font-size: 18px;
+}
+
+#search-results {
+  position: fixed;
+  top: 45px;
+  left: 10px;
+  z-index: 1001;
+}
+
+#search-results .search-results-item {
+  width: 400px;
+  padding: 12px;
+  background: #fff;
+  font-weight: bold;
+}
+
+#card {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1001;
+  width: 400px;
+}
+
+#card .content {
+  padding: 10px;
+  background: #fff;
 }
