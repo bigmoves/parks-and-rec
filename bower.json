@@ -14,5 +14,9 @@
     "ember-qunit-notifications": "0.0.5",
     "qunit": "~1.17.1",
     "mapbox.js": "~2.1.5"
+  },
+  "resolutions": {
+    "ember": "canary",
+    "handlebars": ">= 2.0.0 < 3.0.0"
   }
 }
