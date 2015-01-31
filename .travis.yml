@@ -1,20 +1,25 @@
----
 language: node_js
-
 sudo: false
-
 cache:
   directories:
-    - node_modules
-
+  - node_modules
 before_install:
-  - "npm config set spin false"
-  - "npm install -g npm@^2"
-
+- "npm config set spin false"
+- "npm install -g npm@^2"
 install:
-  - npm install -g bower
-  - npm install
-  - bower install
-
+- "npm install -g ember-cli"
+- "npm install -g bower"
+- "npm install"
+- "bower install"
 script:
-  - npm test
+- "npm test"
+deploy:
+  provider: heroku
+  api_key:
+    secure: poz0FbaWXmnmL+jCou6C5J86XLb5MpEO7+OnNLunH7O9YtSuxysFb89UUxBuWbEz7+B3rzPyZtrWOnd3gytZSRkvXBe2cmLKqRUoBsAgYPM1U8/O7cVLWddDLefs5s8VmLg9CQ82YWfYMRKBHddM0eigQw/Begj8v2FB8tYERA8=
+  on:
+    repo: chadtmiller/parks-and-rec
+  app: parks-and-rec
+  run:
+    - "ember build -p"
+    - restart
