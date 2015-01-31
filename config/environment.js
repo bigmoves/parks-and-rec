@@ -34,7 +34,7 @@ module.exports = function(environment) {
       'default-src': "'none'",
       'script-src': "'self'",
       'font-src': "'self'",
-      'connect-src': "'self' http://a.tiles.mapbox.com",
+      'connect-src': "'self' http://a.tiles.mapbox.com https://parks-and-rec.herokuapp.com",
       'img-src': "'self' data: http://a.tiles.mapbox.com http://b.tiles.mapbox.com",
       'style-src': "'self'",
       'media-src': "'self'"
