@@ -23,7 +23,7 @@ export default Ember.Component.extend({
 
     this.get('parks').forEach(park => {
       var latlng = L.latLng(park.get('loc.lat'), park.get('loc.lon'));
-      var marker = L.marker(latlng, {
+      L.marker(latlng, {
         icon: L.mapbox.marker.icon({
           'marker-color': '#333',
           'marker-symbol': 'park',
