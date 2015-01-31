@@ -19,6 +19,3 @@ deploy:
   on:
     repo: chadtmiller/parks-and-rec
   app: parks-and-rec
-  run:
-    - "node_modules/ember-cli/bin/ember build -p"
-    - restart

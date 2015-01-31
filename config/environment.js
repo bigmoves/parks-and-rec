@@ -6,6 +6,9 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
+
+    proxyUri: 'https://parks-and-rec.herokuapp.com/orchestrate',
+
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -39,6 +42,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
+    ENV.proxyUri = '/orchestrate';
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
